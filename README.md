@@ -1,5 +1,6 @@
 # javascript-learning
 
+####Basics
 [Closures](#closures)
 
 ## Closures
