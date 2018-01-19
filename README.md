@@ -8,6 +8,7 @@ A closure is when an inner function defined within another function has access t
 
 closures
 ### let vs var 
+ - loops and functions
 ### lexical scope
 ### hoisting
 ### module patterns
