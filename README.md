@@ -54,6 +54,7 @@ function outerFunction() {
     // Pass the variable to foo 
     // privateBar = 'test';
     // foo = privateBar
+    // return foo
     
     // Or
     function manipulatePrivateBar() {
