@@ -1,6 +1,6 @@
 # javascript-learning
 
-[create an anchor](#Closures)
+[Closures](#closures)
 
 ## Closures
 
