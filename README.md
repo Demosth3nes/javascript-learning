@@ -64,11 +64,9 @@ function outerFunction() {
     
     return manipulatePrivateBar();
     
-    
   }
   
   return innerFunction();
-  
   
 }
 
@@ -80,9 +78,6 @@ console.log(exposedBar);
 
 ```
 
-
-
-closures
 ### let vs var 
  - loops and functions
 ### lexical scope
