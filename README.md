@@ -2,8 +2,83 @@
 
 ## Closures
 
+A closure is when an inner function is closed over (read 'swallowed up') by an outer function thereby allowing the inner function to gain access to the outer function's variables and methods. 
 
-A closure is when an inner function defined within another function has access to the outer function's variables and functions. Should the inner function define a variable within, it will be private within the scope of the function, as the variable will not be available to the parent scope.
+```
+function outerFunction() {
+  var foo = 'hello';
+  
+  function innerFunction() {
+    console.log(foo);
+  }
+  
+  innerFunction();
+  
+}
+
+outerFunction();
+
+/** Output */
+// 'hello'
+```
+
+Any variable or function defined within the inner function is private within that scope...
+
+```
+function outerFunction() {
+  var foo = 'hello';
+  
+  function innerFunction() {
+    var privateBar;
+    
+  }
+  
+  alert(privateBar);
+  
+}
+
+outerFunction();
+
+/** Output */
+// ReferenceError: privateBar is not defined
+```
+
+..unless the value is exposed to the outer function.
+
+```
+function outerFunction() {
+  var foo;
+  
+  function innerFunction() {
+    var privateBar = 'hello';
+    // Pass the variable to foo 
+    // privateBar = 'test';
+    // foo = privateBar
+    
+    // Or
+    function manipulatePrivateBar() {
+      privateBar = 'test';
+      return privateBar;
+    }
+    
+    return manipulatePrivateBar();
+    
+    
+  }
+  
+  return innerFunction();
+  
+  
+}
+
+var exposedBar  = outerFunction();
+console.log(exposedBar);
+
+/** Output */
+// 'test'
+
+```
+
 
 
 closures
