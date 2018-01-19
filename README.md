@@ -12,6 +12,8 @@ closures
 ### lexical scope
 ### hoisting
 ### module patterns
-### React Components when to extend component and when not to
-### import {default as Component} from 'path/to/component' - shorthand
+### React
+#### React Components when to extend component and when not to
+#### import {default as Component} from 'path/to/component' - shorthand
+#### {...props}
 
