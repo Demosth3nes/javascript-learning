@@ -1,5 +1,7 @@
 # javascript-learning
 
+[create an anchor](#Closures)
+
 ## Closures
 
 A closure is when an inner function is closed over (read 'swallowed up') by an outer function thereby allowing the inner function to gain access to the outer function's variables and methods. 
