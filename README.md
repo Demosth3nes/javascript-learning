@@ -80,10 +80,25 @@ console.log(exposedBar);
 // 'test'
 
 ```
+### lexical scope
+Javascript is a function scoped language, meaning that each function contains its own scope. Simply applying curly braces ({}) without the word 'function', does not create a seperate scope. 
+
+```
+function hello(){
+  var test = 'hi';
+    
+}
+
+console.log(test);
+
+```
+
+The term 'lexical scoping' is based on how the compiler attempts to provide meaning to the code. 
+
 
 ### let vs var 
  - loops and functions
-### lexical scope
+
 ### hoisting
 ### module patterns
 ### React
