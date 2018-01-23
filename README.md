@@ -1,7 +1,8 @@
 # javascript-learning
 
-#### Basics
+#### Fundamentals
 [Closures](#closures)
+[Lexical scope](#lexical-scope)
 
 ## Closures
 
