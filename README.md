@@ -5,7 +5,7 @@
 
 ## Closures
 
-A closure is when an inner function is closed over (read 'swallowed up') by an outer function thereby allowing the inner function to gain access to the outer function's variables and methods. 
+A closure is when an inner function is closed over (read 'swallowed up') by an outer function thereby allowing the inner function to gain access to the outer function's variables and methods. But its not just that, the inner functions are also able to rememeber it's lexical scope (see below) no matter where it is called. 
 
 ```
 function outerFunction() {
@@ -80,8 +80,8 @@ console.log(exposedBar);
 // 'test'
 
 ```
-### lexical scope
-Javascript is a function scoped language, meaning that each function contains its own scope. Simply applying curly braces ({}) without the word 'function', does not create a seperate scope. 
+### Lexical scope
+Javascript is a function scoped language, meaning that each function creates its own scope. Simply applying curly braces ({}) without the word 'function', does not create a seperate scope. Lexical scoping refers to how variables within a nested function are able to access its parent's function's scope.
 
 ```
 function hello(){
@@ -91,10 +91,28 @@ function hello(){
 
 console.log(test);
 
+// Output
+// ReferenceError: test is not defined
 ```
 
-The term 'lexical scoping' is based on how the compiler attempts to provide meaning to the code. 
+Lexically scoped
+```
+function outerFunction() {
+  var foo = 'hello';
+  
+  function innerFunction() {
+    console.log(foo);
+  }
+  
+  innerFunction();
+  
+}
 
+outerFunction();
+
+/** Output */
+// 'hello'
+```
 
 ### let vs var 
  - loops and functions
