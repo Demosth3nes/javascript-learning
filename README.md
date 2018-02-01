@@ -121,8 +121,10 @@ outerFunction();
 
 ### hoisting
 ### module patterns
+#### module factory and singleton
 ### React
 #### React Components when to extend component and when not to
 #### import {default as Component} from 'path/to/component' - shorthand
 #### {...props}
+
 
