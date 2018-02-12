@@ -7,6 +7,8 @@
 
 [Let Vs Var](#let-vs-var)
 
+[Hoisting] (#hoisting)
+
 ## Closures
 
 A closure is when an inner function is closed over (read 'swallowed up') by an outer function thereby allowing the inner function to gain access to the outer function's variables and methods. But its not just that, the inner functions are also able to rememeber it's lexical scope (see below) no matter where it is called. 
@@ -147,7 +149,51 @@ The first console.log will count from 0 -> 4, however the second will be 5 each 
 ```
 
 
-### hoisting
+
+### Hoisting
+
+One of the key principles of Javascript other than it being function-scoped is hoisting. Hoisting occurs during the first phase of code interpreation when variables and declared functions(not function expressions) are sent to the beginning of the script. You may have found that sometimes variables declared after functions and still they are able to be used - this is due to hoisting.
+
+```
+
+function test() {
+  alert(hoisted);
+}
+
+var hoisted = 'hello world';
+
+test();
+
+```
+
+The above script alerts the text 'hello world' because after JS has gone through and interpreted the code, it actually looks like this.
+
+```
+var hoisted = 'hello world';
+
+function test() {
+  alert(hoisted);
+}
+
+test();
+
+```
+Interestingly if you were to move the test() above its declartion it would also work - due to the function declaration 'test' being hoisted above the function call. However, should the test() be move above the var like this:
+
+```
+
+test();
+
+var hoisted = 'hello world';
+
+function test() {
+  alert(hoisted);
+}
+
+```
+
+It will not, because even though the variable is in fact hoisted, it has not been assigned yet, therefore it returns 'undefined';
+
 ### module patterns
 #### module factory and singleton
 ### React
