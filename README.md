@@ -2,7 +2,9 @@
 
 #### Fundamentals
 [Closures](#closures)
+
 [Lexical scope](#lexical-scope)
+
 [Let Vs Var](#let-vs-var)
 
 ## Closures
