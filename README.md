@@ -87,7 +87,7 @@ console.log(exposedBar);
 
 ```
 ### Lexical scope
-Javascript is a function scoped language, meaning that each function creates its own scope. Simply applying curly braces ({}) without the word 'function', does not create a seperate scope(although we will see later than 'let' is in fact block scoped). Lexical scoping refers to how variables within a nested function are able to access its parent's function's scope.
+Javascript is a function scoped language, meaning that each function creates its own scope. Simply applying curly braces ({}) without the word 'function', does not create a seperate scope(although we will see later that 'let' is in fact block scoped). Lexical scoping refers to how variables within a nested function are able to access its parent's function's scope.
 
 ```
 function hello(){
@@ -180,7 +180,7 @@ test();
 // Alert 'hello world'
 
 ```
-Interestingly if you were to move the test() above its declartion it would also work - due to the function declaration 'test' being hoisted above the function call. However, should the test() be move above the var like this:
+Interestingly if you were to move the test() above its declaration it would also work - due to the function declaration 'test' being hoisted above the function call. However, should the test() be move above the var like this:
 
 ```
 
