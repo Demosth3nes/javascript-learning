@@ -7,7 +7,7 @@
 
 [Let Vs Var](#let-vs-var)
 
-[Hoisting] (#hoisting)
+[Hoisting](#hoisting)
 
 ## Closures
 
