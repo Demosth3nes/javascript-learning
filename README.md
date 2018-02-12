@@ -121,7 +121,6 @@ outerFunction();
 ```
 
 ### let vs var 
- - loops and functions
  
 One of the most recent changes to ecmaScript 6 is the introduction of the 'let' keyword. Unlike var's they are not hoisted, and can be confined to within a block scope - curly braces {}. This provides certain advantages. Ever had a loop with a function inside and the iteration variable kept producing the last iterated value?
 
