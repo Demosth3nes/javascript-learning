@@ -147,8 +147,7 @@ The first console.log will count from 0 -> 4, however the second will be 5 each 
 /** Output */
 // 0, 1, 2, 3, 4
 ```
-
-
+It's important to note that the let vs var arguement also comes down to styling choices and preference. There is no necessary right and wrong regarding when a var or let should be used. In the JS community you will find compelling arguements for each, I personally believe that you should be free to use both. Let - If you wish to show it is only changed within its context, e.g. a function. Var - for when it may be changed much further down from where it is declared. Nothing wrong with variety.
 
 ### Hoisting
 
