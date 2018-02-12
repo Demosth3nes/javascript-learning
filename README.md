@@ -9,6 +9,8 @@
 
 [Hoisting](#hoisting)
 
+[Modules](#modules)
+
 ## Closures
 
 A closure is when an inner function is closed over (read 'swallowed up') by an outer function thereby allowing the inner function to gain access to the outer function's variables and methods. But its not just that, the inner functions are also able to rememeber it's lexical scope (see below) no matter where it is called. 
@@ -198,8 +200,33 @@ function test() {
 
 It will not, because even though the variable is in fact hoisted, it has not been assigned yet, therefore it returns 'undefined';
 
-### module patterns
-#### module factory and singleton
+### Modules
+Something that had confused me for a while is modules and how they expose only the necessary information, while hiding certain functionality. Below, we have a singleton module- this is a module that is only instantiated the one time, unlike a factory that can be created multiple times.
+
+```
+
+var testModule = (function () {
+  var privateVar = 'hello';
+  
+  var publicAPI = {
+    publicFunction: function() {
+      privateVar += ' world';
+      return privateVar;
+    }
+  }
+  
+  return publicAPI;
+
+})();
+
+console.log(testModule.publicFunction());
+
+// Output 'hello world'
+
+```
+
+This is a typical module pattern that hides the private variables and exposes only the publicAPI, useful for when you don't want users inadvertently making changes to certain parts of the code.
+
 ### React
 #### React Components when to extend component and when not to
 #### import {default as Component} from 'path/to/component' - shorthand
