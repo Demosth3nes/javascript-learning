@@ -2,8 +2,8 @@
 
 #### Fundamentals
 [Closures](#closures)
-
 [Lexical scope](#lexical-scope)
+[Let Vs Var](#let-vs-var)
 
 ## Closures
 
@@ -130,7 +130,7 @@ One of the most recent changes to ecmaScript 6 is the introduction of the 'let' 
 }
 ```
 
-The first console.log will count from 0 -> 4, however the second will be 5 each time. Why you ask? Because with var it is hoisted, and not rebound every iteration within the scope, so it is always referencing the same variable sitting in the parent/global scope. Let on the other hand is rebound each iteration as it is block scoped, so each time the loop is ran, let is being assigned the new index.
+The first console.log will count from 0 -> 4, however the second will be 5 each time. Why you ask? Because ***var*** is hoisted, and not re-bound every iteration within the scope, so it is always referencing the same variable sitting in the parent/global scope. Let on the other hand is rebound each iteration as it is block scoped, so each time the loop is ran, let is being assigned the new index.
 
 ```
 (let i = 0;i < 5; i++) {
