@@ -162,6 +162,8 @@ var hoisted = 'hello world';
 
 test();
 
+// Alert 'hello world'
+
 ```
 
 The above script alerts the text 'hello world' because after JS has gone through and interpreted the code, it actually looks like this.
@@ -175,6 +177,8 @@ function test() {
 
 test();
 
+// Alert 'hello world'
+
 ```
 Interestingly if you were to move the test() above its declartion it would also work - due to the function declaration 'test' being hoisted above the function call. However, should the test() be move above the var like this:
 
@@ -187,6 +191,8 @@ var hoisted = 'hello world';
 function test() {
   alert(hoisted);
 }
+
+// Undefined
 
 ```
 
