@@ -227,6 +227,8 @@ console.log(testModule.publicFunction());
 
 This is a typical module pattern that hides the private variables and exposes only the publicAPI, useful for when you don't want users inadvertently making changes to certain parts of the code.
 
+### Prototypes
+### ES6 Classes are syntatic sugar
 ### React
 #### React Components when to extend component and when not to
 #### import {default as Component} from 'path/to/component' - shorthand
