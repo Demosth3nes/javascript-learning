@@ -229,6 +229,8 @@ This is a typical module pattern that hides the private variables and exposes on
 
 ### Prototypes
 ### ES6 Classes are syntatic sugar
+### Super()
+### 
 ### React
 #### React Components when to extend component and when not to
 #### import {default as Component} from 'path/to/component' - shorthand
